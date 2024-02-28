@@ -15,6 +15,7 @@ public class Main {
         boolean done = false;
         String playAgain = "";
 
+        //overarching do while loop to loop playing game
         do
         {
             //generate random die rolls and add them together, display
