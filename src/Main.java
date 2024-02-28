@@ -29,13 +29,12 @@ public class Main {
                     System.out.println(("Natural, you win!!!"));
                     break;
                 case 4,5,6,8,9,10:
-                    System.out.println("Do you want to roll for point");
-
+                    System.out.println("Roll for point");
                     break;
 
             }
 
-            System.out.println("Do you want to continue [Y/N] ");
+            System.out.println("Do you want to play again [Y/N] ");
             continueYN = in.nextLine();
         } while(continueYN.equalsIgnoreCase("Y"));
     }
