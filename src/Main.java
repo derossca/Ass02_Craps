@@ -25,8 +25,28 @@ public class Main {
                 crapsRoll = die1 + die2;
                 System.out.println(crapsRoll);
 
+                if(crapsRoll == 2){
+                    System.out.println("Craps, you lose!!!");
+                    done = true;
+                } else if (crapsRoll == 3){
+                    System.out.println("Craps, you lose!!!");
+                    done = true;
+                } else if (crapsRoll == 7){
+                    System.out.println("Natural, you win!!!");
+                    done = true;
+                } else if (crapsRoll == 11){
+                    System.out.println("Natural, you win!!!");
+                    done = true;
+                } else {
+                    System.out.println("Roll for point!!!");
+                    die1 = rnd.nextInt(6) + 1;
+                    die2 = rnd.nextInt(6) + 1;
+                    crapsRoll = die1 + die2;
+                }
             } while (!done);
 
+            done = false; //resetting sentinel
+            //prompt to play again with input
             System.out.println("Do you want to play again Yes or No [Y/N] ");
             playAgain = in.nextLine();
         } while (playAgain.equalsIgnoreCase("Y"));
