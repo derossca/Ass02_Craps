@@ -7,35 +7,28 @@ public class Main {
     {
         //declaring variables
         Scanner in = new Scanner(System.in);
-        Random rnd = new Random(); //created random object called rnd
-        int die1 = rnd.nextInt(6) + 1;
-        int die2 = rnd.nextInt(6) + 1;
-        int crapsRoll = die1 + die2;
-        int point = crapsRoll;
+        Random rnd = new Random();
+        int die1 = 0;
+        int die2 = 0;
+        int crapsRoll = 0;
+        int point = 0;
         boolean done = false;
-        String continueYN = "";
-        String trash = "";
+        String playAgain = "";
 
-        //do while loop that loops the whole game
+        //overarching do while loop for whole game
         do
         {
-            //display roll of die together
-            System.out.println(crapsRoll);
-            switch (crapsRoll){
-                case 2,3,12:
-                    System.out.println("Craps you lose!!!");
-                    break;
-                case 7,11:
-                    System.out.println(("Natural, you win!!!"));
-                    break;
-                case 4,5,6,8,9,10:
-                    System.out.println("Roll for point");
-                    break;
+            do
+            {
+                die1 = rnd.nextInt(6) + 1;
+                die2 = rnd.nextInt(6) + 1;
+                crapsRoll = die1 + die2;
+                System.out.println(crapsRoll);
 
-            }
+            } while (!done);
 
-            System.out.println("Do you want to play again [Y/N] ");
-            continueYN = in.nextLine();
-        } while(continueYN.equalsIgnoreCase("Y"));
+            System.out.println("Do you want to play again Yes or No [Y/N] ");
+            playAgain = in.nextLine();
+        } while (playAgain.equalsIgnoreCase("Y"));
     }
 }
