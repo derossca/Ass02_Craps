@@ -61,13 +61,16 @@ public class Main {
                     }
                 } while (!done);
             }
-            //prompt to play again
-            System.out.println("Do you want to play again, Yes or No [Y/N]");
-            playAgain = in.nextLine();
-            if(playAgain.equalsIgnoreCase("Y") || (playAgain.equalsIgnoreCase("N"))){
-                break;
-            } else{
-            System.out.println("Incorrect input: " + playAgain);
+
+            while(true) {
+                //prompt to play again
+                System.out.println("Do you want to play again, Yes or No [Y/N]");
+                playAgain = in.nextLine();
+                if (playAgain.equalsIgnoreCase("Y") || (playAgain.equalsIgnoreCase("N"))) {
+                    break;
+                } else {
+                    System.out.println("Incorrect input: " + playAgain);
+                }
             }
         } while(playAgain.equalsIgnoreCase("Y"));
     }
